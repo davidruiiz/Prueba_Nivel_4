@@ -54,3 +54,9 @@ def algoritmo(grafo, inicio):
     return previos
 
 # b)
+incio = superheroes.index("Iron Man")
+previos = algoritmo(grafo, inicio)
+print("Árbol de expansión máximo desde Iron Man")
+for i, p in enumerate(previos):
+    if p is not None:
+        print(f'{superheroes[p]} - {superheroes[i]}')
