@@ -59,4 +59,25 @@ previos = algoritmo(grafo, inicio)
 print("Árbol de expansión máximo desde Iron Man")
 for i, p in enumerate(previos):
     if p is not None:
-        print(f'{superheroes[p]} - {superheroes[i]}')
+        print(f'{superheroes[p]} -- {superheroes[i]}')
+
+# c)
+max_episodios = np.max(grafo)
+print(f'\nEl número máximo de episodios que comparten dos personajes es {max_episodios}')
+print('Los pares de personajes que coinciden con dicho número son:')
+indices = np.where(grafo == max_episodios)
+for i in range(len(indices[0])):
+    if indices[0][i] != indices[1][i]:
+        print(f'{superheroes[indices[0][i]]} -- {superheroes[indices[1][i]]}')
+
+# d)
+print('\nPersonajes de la tabla:')
+for personaje in superheroes:
+    print(personaje)
+
+# e)
+print('\nPersonajes que aparecieron en 9 episodios:')
+indices_9 = np.where(grafo == 9)
+for i in range(len(indices_9[0])):
+    if indices_9[0][i] != indices_9[1][i]:
+        print(f'{superheroes[indices_9[0][i]]} -- {superheroes[indices_9[1][i]]}')
