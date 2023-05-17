@@ -37,7 +37,7 @@ superheroes = ["Iron Man", "Thor", "The Winter Soldier", "Captain America", "Hul
 def algoritmo(grafo, inicio):
     n = len(grafo)
     visitados = [False] * n
-    peso = [-1] * n
+    pesos = [-1] * n
     previos = [None] * n
     pesos[inicio] = 0
     cola_prioridad = [(0, inicio)]
@@ -47,14 +47,14 @@ def algoritmo(grafo, inicio):
         if not visitados[u]:
             visitados[u] = True
             for v, peso_uv in enumerate(grafo[u]):
-                if not visitados[v] and peso[v] > peso_uv:
+                if not visitados[v] and (pesos[v] == -1 or peso[v] < peso_uv):
                     peso[v] = peso_uv
                     previos[v] = u
                     heappush(cola_prioridad, (peso_uv, v))
     return previos
 
 # b)
-incio = superheroes.index("Iron Man")
+inicio = superheroes.index("Iron Man")
 previos = algoritmo(grafo, inicio)
 print("Árbol de expansión máximo desde Iron Man")
 for i, p in enumerate(previos):
