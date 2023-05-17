@@ -34,24 +34,24 @@ grafo = np.array([              # Matriz de adyacencia
 superheroes = ["Iron Man", "Thor", "The Winter Soldier", "Captain America", "Hulk", "Black Widow", "Hawkeye", "Nick Fury"]
 
 
-def algoritmo(grafo, inicio):
-    n = len(grafo)
-    visitados = [False] * n
-    pesos = [-1] * n
-    previos = [None] * n
-    pesos[inicio] = 0
-    cola_prioridad = [(0, inicio)]
+def algoritmo(grafo, inicio): 
+    n = len(grafo) 
+    visitados = [False]*n 
+    pesos = [-1]*n 
+    previos = [None]*n 
+    pesos[inicio] = 0 
+    cola_prioridad = [(0, inicio)] 
 
-    while cola_prioridad:
-        peso, u = heappop(cola_prioridad)
-        if not visitados[u]:
-            visitados[u] = True
-            for v, peso_uv in enumerate(grafo[u]):
-                if not visitados[v] and (pesos[v] == -1 or peso[v] < peso_uv):
-                    peso[v] = peso_uv
-                    previos[v] = u
+    while cola_prioridad: 
+        peso, u = heappop(cola_prioridad) 
+        if not visitados[u]: 
+            visitados[u] = True 
+            for v, peso_uv in enumerate(grafo[u]): 
+                if not visitados[v] and (pesos[v] == -1 or pesos[v] < peso_uv): 
+                    pesos[v] = peso_uv 
+                    previos[v] = u 
                     heappush(cola_prioridad, (peso_uv, v))
-    return previos
+    return previos 
 
 # b)
 inicio = superheroes.index("Iron Man")
