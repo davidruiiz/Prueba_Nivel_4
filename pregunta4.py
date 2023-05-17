@@ -19,3 +19,19 @@ distancias = [
     [399, 199, 385, 990, 412, 155, 0, 100],
     [233, 401, 280, 361, 576, 621, 100, 0]
 ]
+
+superheroes = ["Iron Man", "The Incredible Hulk", "Khan", "Thor", "Captain America", "Ant-Man", "Nick Fury", "The Winter Soldier"]
+
+               
+def calcular_ruta(ruta):
+    return sum(distancias[i][j] for i, j in zip(ruta, ruta[1:] + ruta[:1]))
+
+rutas = [[6] + list(ruta) for ruta in itertools.permutations([i for i in range(8) if i != 6])]
+
+ruta_minima = min(rutas, key=calcular_ruta)
+
+if __name__ == "__main__":
+    print("La ruta más corta es:")
+    for i in ruta_minima:
+        print(superheroes[i])
+    print("Con una longitud total de:", calcular_ruta(ruta_minima))
