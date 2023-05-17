@@ -13,3 +13,10 @@ Implementar los algoritmos necesarios para resolver las siguientes tareas:
     
     e. indicar qué personajes aparecieron en nueve episodios de la saga.
 """
+
+import numpy as np
+from heapq import heappop, heappush
+
+grafo = np.array([
+    
+])
