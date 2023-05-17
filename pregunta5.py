@@ -27,3 +27,5 @@ grafo = np.array([              # Matriz de adyacencia
   [3, 9, 5, 9, 4, 1, 0, 1],
   [2, 1, 0, 3, 5, 6, 1, 0]
 ]) 
+
+superheroes = ["Iron Man", "Thor", "The Winter Soldier", "Captain America", "Hulk", "Black Widow", "Hawkeye", "Nick Fury"]
