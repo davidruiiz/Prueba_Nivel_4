@@ -1,4 +1,5 @@
 """"
+PREGUNTA 3
 Kamala Khan alias Ms. Marvel es una adolescente Musulmana Pakistaní-estadounidense de Nueva Jersey. 
 En el MCU tiene un linaje mutante latente activado unos misteriosos anillos que le dan una polimorfa con la capacidad de estirar su cuerpo de casi cualquier forma imaginable.
 Kamala era una gran fan de los superhéroes, especialmente de Carol Danvers, la antigua Ms. Marvel y por eso se ha convertido en una experta en redes sociales,
