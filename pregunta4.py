@@ -6,3 +6,16 @@ Nick Fury se encuentra en los cuarteles generales de S.H.I.E.L.D. y debe visitar
     
     b. las distancias entre la localización de cada superhéroe están cargadas en la siguiente matriz:
 """
+
+import itertools
+
+distancias = [
+    [0, 675, 400, 166, 809, 720, 399, 233],
+    [675, 0, 540, 687, 179, 348, 199, 401],
+    [400, 540, 0, 107, 752, 521, 385, 280],
+    [166, 687, 107, 0, 111, 540, 990, 361],
+    [809, 179, 752, 111, 0, 206, 412, 576],
+    [720, 348, 521, 540, 206, 0, 155, 621],
+    [399, 199, 385, 990, 412, 155, 0, 100],
+    [233, 401, 280, 361, 576, 621, 100, 0]
+]
