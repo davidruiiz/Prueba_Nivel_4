@@ -17,6 +17,13 @@ Implementar los algoritmos necesarios para resolver las siguientes tareas:
 import numpy as np
 from heapq import heappop, heappush
 
-grafo = np.array([
-    
-])
+grafo = np.array([              # Matriz de adyacencia
+  [0, 6, 0, 1, 8, 7, 3, 2],
+  [6, 0, 0, 6, 1, 8, 9, 1],
+  [0, 0, 0, 1, 2, 1, 5, 0],
+  [1, 6, 1, 0, 1, 5, 9, 3],
+  [8, 1, 2, 1, 0, 2, 4, 5],
+  [7, 8, 1, 5, 2, 0, 1, 6],
+  [3, 9, 5, 9, 4, 1, 0, 1],
+  [2, 1, 0, 3, 5, 6, 1, 0]
+]) 
