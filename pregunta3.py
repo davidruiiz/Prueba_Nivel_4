@@ -19,9 +19,7 @@ pero nos ha pedido ayuda para implementar un grafo social y los algoritmos neces
     f. indique a todas las personas que sigue a través de su red de Instagram Thor.
 """
 
-# ---------------------------------------
-# Apartado A: Carga de los datos
-# ---------------------------------------
+# a.
 
 superheroes = ['Iron Man', 'The Incredible Hulk', 'Khan', 'Thor', 'Captain America', 'Ant-Man', 'Nick Fury', 'The Winter Soldier']
 
@@ -47,9 +45,7 @@ instagram_matrix = [
     [33, 41, 24, 61, 45, 41, 11, 0]
 ]
 
-# ---------------------------------------
-# Apartado B: Creación de los grafos
-# ---------------------------------------
+# b.
 
 def create_graph(superheroes, matrix):
     graph = {}
@@ -71,9 +67,7 @@ def create_graph(superheroes, matrix):
 twitter_graph = create_graph(superheroes, twitter_matrix)
 instagram_graph = create_graph(superheroes, instagram_matrix)
 
-# ---------------------------------------
-# Apartado C: Árbol de expansión máximo
-# ---------------------------------------
+# c.
 
 def maximum_spanning_tree(graph):
     max_tree = {}
@@ -98,9 +92,7 @@ def maximum_spanning_tree(graph):
 max_tree_twitter = maximum_spanning_tree(twitter_graph)
 max_tree_instagram = maximum_spanning_tree(instagram_graph)
 
-# ---------------------------------------
-# Apartado D: Conexión entre 'Captain America' y 'Nick Fury' en Twitter
-# ---------------------------------------
+# d.
 
 def has_path(graph, start, end):
     visited = set()
@@ -117,15 +109,13 @@ def has_path(graph, start, end):
 
 has_path_twitter = has_path(twitter_graph, 'Captain America', 'Nick Fury')
 
-# ---------------------------------------
-# Apartado E: Conexión entre 'The Winter Soldier' e 'Iron Man' en cualquier red social
-# ---------------------------------------
+
+# e.
 
 has_path_social = has_path(twitter_graph, 'The Winter Soldier', 'Iron Man') or has_path(instagram_graph, 'The Winter Soldier', 'Iron Man')
 
-# ---------------------------------------
-# Apartado F: Personas que Thor sigue en Instagram
-# ---------------------------------------
+
+# f.
 
 thor_follows = [neighbor for neighbor in instagram_graph['Thor']]
 
