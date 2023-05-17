@@ -17,6 +17,9 @@ Implementar los algoritmos necesarios para resolver las siguientes tareas:
 import numpy as np
 from heapq import heappop, heappush
 
+
+# a)
+
 grafo = np.array([              # Matriz de adyacencia
   [0, 6, 0, 1, 8, 7, 3, 2],
   [6, 0, 0, 6, 1, 8, 9, 1],
@@ -29,3 +32,25 @@ grafo = np.array([              # Matriz de adyacencia
 ]) 
 
 superheroes = ["Iron Man", "Thor", "The Winter Soldier", "Captain America", "Hulk", "Black Widow", "Hawkeye", "Nick Fury"]
+
+
+def algoritmo(grafo, inicio):
+    n = len(grafo)
+    visitados = [False] * n
+    peso = [-1] * n
+    previos = [None] * n
+    pesos[inicio] = 0
+    cola_prioridad = [(0, inicio)]
+
+    while cola_prioridad:
+        peso, u = heappop(cola_prioridad)
+        if not visitados[u]:
+            visitados[u] = True
+            for v, peso_uv in enumerate(grafo[u]):
+                if not visitados[v] and peso[v] > peso_uv:
+                    peso[v] = peso_uv
+                    previos[v] = u
+                    heappush(cola_prioridad, (peso_uv, v))
+    return previos
+
+# b)
